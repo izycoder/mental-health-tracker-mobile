@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mental_health_tracker/screens/menu.dart';
+import 'package:mental_health_tracker/screens/moodentry_form.dart';
+
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
 
@@ -54,10 +56,11 @@ class LeftDrawer extends StatelessWidget {
     title: const Text('Tambah Mood'),
     // Bagian redirection ke MoodEntryFormPage
     onTap: () {
-      /*
-      TODO: Buatlah routing ke MoodEntryFormPage di sini,
-      setelah halaman MoodEntryFormPage sudah dibuat.
-      */
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const MoodEntryFormPage(),
+          ));
     },
   ),        ],
       ),
